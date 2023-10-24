@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: robertocpythonsamplevscodeflasktutorial 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: robertocpythonsamplevscodeflasktutorial
+  template:
+    metadata:
+      labels:
+        app: robertocpythonsamplevscodeflasktutorial 
+    spec:
+      containers:
+        - name: robertocpythonsamplevscodeflasktutorial 
+          image: segaprueba.azurecr.io/robertocpythonsamplevscodeflasktutorial
+          ports:
+          - containerPort: 5000
